@@ -8,14 +8,26 @@
   </head>
   <body>
     <div class="background-glow" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="floating-orb orb-one" aria-hidden="true"></div>
+    <div class="floating-orb orb-two" aria-hidden="true"></div>
 
     <main class="container">
-      <header class="hero">
+      <header class="top-bar top-bar-right">
+        <nav aria-label="Primary navigation" class="top-nav">
+          <ul class="tabs">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero" id="home">
         <h1>Henry Umana</h1>
         <p class="intro">
           I'm a first-year Computer Science student at Boston University.
         </p>
-      </header>
+      </section>
 
       <section class="card-grid" aria-label="Highlights">
         <article class="card">
@@ -71,9 +83,9 @@
         </article>
 
         <article class="card">
-          <h2>Let's Connect</h2>
+          <h2>Profiles</h2>
           <p>
-            I'm always open to collaborating, learning, and building cool projects.
+            Connect with me on GitHub and LinkedIn.
           </p>
           <div class="links">
             <a href="https://github.com/henrymumana" target="_blank" rel="noreferrer">GitHub</a>
