@@ -89,6 +89,19 @@ h1 {
   line-height: 1.6;
 }
 
+.card ul ul {
+  margin-top: 0.25rem;
+  padding-left: 1.1rem;
+}
+
+.card a {
+  color: #e2e8f0;
+}
+
+.card a:hover {
+  color: #93c5fd;
+}
+
 .card p {
   color: var(--muted);
   line-height: 1.6;
