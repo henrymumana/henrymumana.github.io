@@ -21,7 +21,7 @@ I’m a first-year **Computer Science** student at **Boston University** with a 
 
 ## 📫 Contact
 - GitHub: [@henrymumana](https://github.com/henrymumana)
-- LinkedIn: https://www.linkedin.com/in/henryumana/
+- LinkedIn: [@henryumana](https://www.linkedin.com/in/henryumana/)
 
 ---
 
