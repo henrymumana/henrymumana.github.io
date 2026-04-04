@@ -95,16 +95,18 @@ body {
 
 .top-bar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.2rem;
 }
 
-.brand {
-  color: #dbeafe;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.top-bar-right {
+  justify-content: flex-end;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .tabs {
@@ -132,9 +134,18 @@ body {
   transform: translateY(-1px);
 }
 
+.tabs a.active {
+  background: rgba(59, 130, 246, 0.6);
+  border-color: rgba(191, 219, 254, 0.9);
+}
+
 .hero {
   text-align: center;
   margin-bottom: 2.2rem;
+}
+
+.compact-hero {
+  margin-bottom: 1.2rem;
 }
 
 .kicker {
@@ -292,9 +303,8 @@ footer {
 }
 
 @media (max-width: 680px) {
-  .top-bar {
-    flex-direction: column;
-    gap: 0.75rem;
+  .top-bar-right {
+    justify-content: center;
   }
 
   .tabs {
