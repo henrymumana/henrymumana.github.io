@@ -8,14 +8,29 @@
   </head>
   <body>
     <div class="background-glow" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="floating-orb orb-one" aria-hidden="true"></div>
+    <div class="floating-orb orb-two" aria-hidden="true"></div>
 
     <main class="container">
-      <header class="hero">
-        <h1>Henry Umana</h1>
-        <p class="intro">
-          I'm a first-year Computer Science student at Boston University.
-        </p>
+      <header class="top-bar">
+        <a class="brand" href="#home">Henry Umana</a>
+        <nav aria-label="Primary navigation">
+          <ul class="tabs">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </header>
+
+      <section class="hero" id="home">
+        <p class="kicker">Computer Science • Boston University</p>
+        <h1>Building, Learning, and Shipping New Ideas.</h1>
+        <p class="intro">
+          I'm a first-year Computer Science student at Boston University focused on software,
+          problem-solving, and collaborative projects that create real impact.
+        </p>
+      </section>
 
       <section class="card-grid" aria-label="Highlights">
         <article class="card">
@@ -80,6 +95,35 @@
             <a href="https://www.linkedin.com/in/henryumana/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </article>
+      </section>
+
+      <section class="contact card" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+        <p>
+          Fill this out and I'll get your message by email.
+        </p>
+        <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" class="contact-form">
+          <input type="hidden" name="_subject" value="New portfolio contact form message" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="school">School / Company (Optional)</label>
+          <input id="school" name="school_or_company" type="text" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <p class="form-note">
+          Replace <code>YOUR_EMAIL@example.com</code> in the form action with your actual email to receive submissions.
+        </p>
       </section>
 
       <footer>
