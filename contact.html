@@ -35,6 +35,7 @@
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://henrymumana.github.io/thanks.html" />
+          <input type="hidden" id="replyto" name="_replyto" value="" />
 
           <label for="name">Full Name</label>
           <input id="name" name="name" type="text" required />
@@ -42,7 +43,7 @@
           <label for="email">Email</label>
           <input
             id="email"
-            name="_replyto"
+            name="email"
             type="email"
             inputmode="email"
             autocomplete="email"
@@ -67,17 +68,24 @@
     <script>
       const contactForm = document.querySelector(".contact-form");
       const emailField = document.querySelector("#email");
+      const replyToField = document.querySelector("#replyto");
 
       const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
 
       if (contactForm && emailField) {
         emailField.addEventListener("input", () => {
           emailField.value = emailField.value.trim();
+          if (replyToField) {
+            replyToField.value = emailField.value;
+          }
           emailField.setCustomValidity("");
         });
 
         contactForm.addEventListener("submit", (event) => {
           emailField.value = emailField.value.trim();
+          if (replyToField) {
+            replyToField.value = emailField.value;
+          }
 
           if (!isValidEmail(emailField.value)) {
             emailField.setCustomValidity("Please enter a valid email address before submitting.");
