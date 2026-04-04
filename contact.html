@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Henry Umana</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="floating-orb orb-one" aria-hidden="true"></div>
+    <div class="floating-orb orb-two" aria-hidden="true"></div>
+
+    <main class="container">
+      <header class="top-bar top-bar-right">
+        <nav aria-label="Primary navigation" class="top-nav">
+          <ul class="tabs">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero compact-hero">
+        <h1>Contact</h1>
+        <p class="intro">Have a question or opportunity? Send me a message.</p>
+      </section>
+
+      <section class="contact card" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+        <p>Fill this out and I'll get your message by email.</p>
+        <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST" class="contact-form">
+          <input type="hidden" name="_subject" value="New portfolio contact form message" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="school">School / Company (Optional)</label>
+          <input id="school" name="school_or_company" type="text" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <p class="form-note">
+          Replace <code>YOUR_EMAIL@example.com</code> in the form action with your email.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
