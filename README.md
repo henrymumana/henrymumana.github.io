@@ -1,4 +1,4 @@
-# Hi, I'm Henry 👋
+# Henry Umana
 
 I’m a first-year **Computer Science** student at **Boston University** with a growing interest in **Information Technology**.
 
