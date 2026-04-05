@@ -295,11 +295,22 @@ code {
   padding: 0.1rem 0.3rem;
 }
 
-footer {
+.site-footer {
   text-align: center;
   margin-top: 2rem;
   color: #bfdbfe;
+}
+
+.site-footer .tagline {
   font-style: italic;
+  margin-bottom: 0.35rem;
+}
+
+.site-footer .copyright {
+  margin: 0;
+  font-style: normal;
+  color: #cbd5e1;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 680px) {
