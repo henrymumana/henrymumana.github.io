@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap");
+
 :root {
   --bg: #050910;
   --bg-soft: #0f1f3d;
@@ -158,6 +160,16 @@ h1 {
   margin: 0.5rem auto 0.8rem;
   font-size: clamp(2rem, 5vw, 3.2rem);
   max-width: 840px;
+  font-family: "Baloo 2", "Trebuchet MS", "Segoe UI", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 16px rgba(59, 130, 246, 0.25);
+}
+
+h2 {
+  font-family: "Baloo 2", "Trebuchet MS", "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .intro {

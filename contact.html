@@ -18,7 +18,7 @@
         <nav aria-label="Primary navigation" class="top-nav">
           <ul class="tabs">
             <li><a href="https://henrymumana.github.io/">Home</a></li>
-            <li><a class="active" href="contact.html?from=nav">Contact</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -35,7 +35,7 @@
           <input type="hidden" name="_subject" value="New message!" />
           <input type="hidden" name="_template" value="box" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://henrymumana.github.io/thanks.html?from=form" />
+          <input type="hidden" name="_next" value="https://henrymumana.github.io/thanks.html" />
           <input type="hidden" id="replyto" name="_replyto" value="" />
 
           <label for="name">Full Name</label>
@@ -71,24 +71,6 @@
     </main>
 
     <script>
-      const params = new URLSearchParams(window.location.search);
-      const cameFromNavParam = params.get("from") === "nav";
-      const referrerUrl = document.referrer ? new URL(document.referrer) : null;
-      const cameFromSameSiteReferrer =
-        !!referrerUrl &&
-        referrerUrl.origin === window.location.origin &&
-        (referrerUrl.pathname === "/" ||
-          referrerUrl.pathname.endsWith("/index.html") ||
-          referrerUrl.pathname.endsWith("/thanks.html") ||
-          referrerUrl.pathname.endsWith("/contact.html"));
-      const contactAccessGranted = sessionStorage.getItem("contactAccessGranted") === "true";
-
-      if (cameFromNavParam || cameFromSameSiteReferrer) {
-        sessionStorage.setItem("contactAccessGranted", "true");
-      } else if (!contactAccessGranted) {
-        window.location.replace("https://henrymumana.github.io/");
-      }
-
       const contactForm = document.querySelector(".contact-form");
       const emailField = document.querySelector("#email");
       const replyToField = document.querySelector("#replyto");
@@ -118,7 +100,6 @@
           }
 
           sessionStorage.setItem("contactFormSubmitted", "true");
-          sessionStorage.setItem("contactAccessGranted", "true");
         });
       }
     </script>
