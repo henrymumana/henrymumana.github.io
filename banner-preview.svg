@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Henry Umana Banner</title>
+  <desc id="desc">Blue gradient banner image with the name Henry Umana.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050910"/>
+      <stop offset="55%" stop-color="#0f1f3d"/>
+      <stop offset="100%" stop-color="#0a1025"/>
+    </linearGradient>
+    <radialGradient id="glowOne" cx="0.2" cy="0.15" r="0.5">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTwo" cx="0.84" cy="0.28" r="0.36">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14315f" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.52"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#glowOne)"/>
+  <rect width="1200" height="630" fill="url(#glowTwo)"/>
+
+  <g opacity="0.22" stroke="#93c5fd" stroke-width="1">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+
+  <rect x="165" y="172" width="870" height="286" rx="32" fill="url(#cardGradient)" stroke="#7dd3fc" stroke-opacity="0.7"/>
+
+  <text x="600" y="330" text-anchor="middle" fill="#eff6ff" font-size="96" font-weight="700" letter-spacing="3" font-family="Trebuchet MS, Segoe UI, Roboto, sans-serif">Henry Umana</text>
+  <text x="600" y="388" text-anchor="middle" fill="#dbeafe" font-size="30" font-family="Inter, Segoe UI, Roboto, sans-serif">Computer Science Student</text>
+</svg>
