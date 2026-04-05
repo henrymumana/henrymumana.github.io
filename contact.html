@@ -17,7 +17,7 @@
         <nav aria-label="Primary navigation" class="top-nav">
           <ul class="tabs">
             <li><a href="https://henrymumana.github.io/">Home</a></li>
-            <li><a class="active" href="contact.html">Contact</a></li>
+            <li><a class="active" href="contact.html?from=nav">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -34,7 +34,7 @@
           <input type="hidden" name="_subject" value="New message!" />
           <input type="hidden" name="_template" value="box" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://henrymumana.github.io/thanks.html" />
+          <input type="hidden" name="_next" value="https://henrymumana.github.io/thanks.html?from=form" />
           <input type="hidden" id="replyto" name="_replyto" value="" />
 
           <label for="name">Full Name</label>
@@ -66,6 +66,12 @@
     </main>
 
     <script>
+      const allowedContactEntry = new URLSearchParams(window.location.search).get("from") === "nav";
+
+      if (!allowedContactEntry) {
+        window.location.replace("https://henrymumana.github.io/");
+      }
+
       const contactForm = document.querySelector(".contact-form");
       const emailField = document.querySelector("#email");
       const replyToField = document.querySelector("#replyto");
