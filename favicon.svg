@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Henry Umana favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1f3d" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#bfdbfe" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg)" />
+  <circle cx="20" cy="18" r="10" fill="#3b82f6" opacity="0.38" />
+  <circle cx="49" cy="45" r="12" fill="#22d3ee" opacity="0.24" />
+  <path d="M17 18h8v28h-8zm22 0h8v28h-8zm-14 11h14v8H25z" fill="url(#glow)" />
+</svg>
