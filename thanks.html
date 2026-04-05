@@ -44,7 +44,7 @@
       const wasFormSubmitted = sessionStorage.getItem("contactFormSubmitted") === "true";
       const thanksContent = document.getElementById("thanks-content");
 
-      if (!cameFromForm || !wasFormSubmitted) {
+      if (!cameFromForm && !wasFormSubmitted) {
         window.location.replace("https://henrymumana.github.io/");
       } else {
         sessionStorage.removeItem("contactFormSubmitted");
