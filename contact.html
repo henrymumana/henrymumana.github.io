@@ -91,7 +91,10 @@
             emailField.setCustomValidity("Please enter a valid email address before submitting.");
             emailField.reportValidity();
             event.preventDefault();
+            return;
           }
+
+          sessionStorage.setItem("contactFormSubmitted", "true");
         });
       }
     </script>

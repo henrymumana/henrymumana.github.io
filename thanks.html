@@ -12,7 +12,7 @@
     <div class="floating-orb orb-one" aria-hidden="true"></div>
     <div class="floating-orb orb-two" aria-hidden="true"></div>
 
-    <main class="container">
+    <main class="container" id="thanks-content" hidden>
       <header class="top-bar top-bar-right">
         <nav aria-label="Primary navigation" class="top-nav">
           <ul class="tabs">
@@ -33,5 +33,19 @@
         </p>
       </section>
     </main>
+
+    <script>
+      const wasFormSubmitted = sessionStorage.getItem("contactFormSubmitted") === "true";
+      const thanksContent = document.getElementById("thanks-content");
+
+      if (!wasFormSubmitted) {
+        window.location.replace("contact.html");
+      } else {
+        sessionStorage.removeItem("contactFormSubmitted");
+        if (thanksContent) {
+          thanksContent.hidden = false;
+        }
+      }
+    </script>
   </body>
 </html>
