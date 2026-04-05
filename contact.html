@@ -71,9 +71,21 @@
     </main>
 
     <script>
-      const allowedContactEntry = new URLSearchParams(window.location.search).get("from") === "nav";
+      const params = new URLSearchParams(window.location.search);
+      const cameFromNavParam = params.get("from") === "nav";
+      const referrerUrl = document.referrer ? new URL(document.referrer) : null;
+      const cameFromSameSiteReferrer =
+        !!referrerUrl &&
+        referrerUrl.origin === window.location.origin &&
+        (referrerUrl.pathname === "/" ||
+          referrerUrl.pathname.endsWith("/index.html") ||
+          referrerUrl.pathname.endsWith("/thanks.html") ||
+          referrerUrl.pathname.endsWith("/contact.html"));
+      const contactAccessGranted = sessionStorage.getItem("contactAccessGranted") === "true";
 
-      if (!allowedContactEntry) {
+      if (cameFromNavParam || cameFromSameSiteReferrer) {
+        sessionStorage.setItem("contactAccessGranted", "true");
+      } else if (!contactAccessGranted) {
         window.location.replace("https://henrymumana.github.io/");
       }
 
@@ -106,6 +118,7 @@
           }
 
           sessionStorage.setItem("contactFormSubmitted", "true");
+          sessionStorage.setItem("contactAccessGranted", "true");
         });
       }
     </script>
