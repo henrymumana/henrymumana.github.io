@@ -231,6 +231,10 @@ h2 {
   color: #93c5fd;
 }
 
+.courses a {
+  text-decoration: none;
+}
+
 .card p {
   color: var(--muted);
   line-height: 1.6;
